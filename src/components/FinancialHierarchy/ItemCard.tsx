@@ -26,7 +26,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({
   }
 
   return (
-    <div className="bg-gray-50 p-3 rounded-md border border-gray-300 flex justify-between items-center hover:bg-gray-100 transition-colors">
+    <div className="flex justify-between items-center py-2 px-3 hover:bg-gray-50 rounded transition-colors">
       <div className="flex-grow flex items-center gap-2">
         <button
           onClick={() => onSelectMotor(item.id)}
@@ -36,26 +36,24 @@ export const ItemCard: React.FC<ItemCardProps> = ({
           <Repeat size={14} />
         </button>
         <div>
-          <p className="text-sm text-gray-900 font-medium">{item.itemName}</p>
-          <p className="text-xs text-gray-600">
+          <p className="text-sm text-gray-900">{item.itemName}</p>
+          <p className="text-xs text-gray-500">
             {formatCurrency(item.unitPrice)} / шт.
           </p>
         </div>
       </div>
-      <div className="flex items-center space-x-2 ml-4">
+      <div className="flex items-center gap-2 ml-4">
+        <span className="text-sm text-gray-600 mr-2">{item.quantity}</span>
         <Button
           variant="icon"
           size="sm"
           onClick={handleDecrement}
           disabled={item.quantity <= 1}
         >
-          <Minus size={16} />
+          <Minus size={14} />
         </Button>
-        <span className="w-10 text-center font-medium text-gray-900">
-          {item.quantity}
-        </span>
         <Button variant="icon" size="sm" onClick={handleIncrement}>
-          <Plus size={16} />
+          <Plus size={14} />
         </Button>
       </div>
     </div>

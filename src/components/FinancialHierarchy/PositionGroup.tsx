@@ -17,13 +17,13 @@ export const PositionGroup: React.FC<PositionGroupProps> = ({
   const [isExpanded, setIsExpanded] = useState(true)
 
   return (
-    <div className="bg-white border border-gray-300 rounded-md shadow-sm">
+    <div>
       <CollapsibleHeader
         isExpanded={isExpanded}
         toggle={() => setIsExpanded(!isExpanded)}
-        className="bg-gray-50 hover:bg-gray-100 rounded-md"
+        className="py-2 hover:bg-blue-50 rounded"
       >
-        <h3 className="text-sm font-semibold text-gray-800 truncate pl-2">
+        <h3 className="text-sm font-medium text-gray-800">
           {group.baseItemName}
         </h3>
         <FinancialTotals
@@ -34,7 +34,7 @@ export const PositionGroup: React.FC<PositionGroupProps> = ({
       </CollapsibleHeader>
 
       {isExpanded && (
-        <div className="py-2 ml-6 space-y-2">
+        <div className="mt-2 space-y-2 pl-4">
           <TransactionTypeGroup
             group={group.incomeGroup}
             onItemQuantityChange={onItemQuantityChange}
