@@ -23,12 +23,10 @@ export const CollapsibleHeader: React.FC<CollapsibleHeaderProps> = ({
 }) => (
   <div
     onClick={toggle}
-    className={`flex items-center justify-between p-2.5 cursor-pointer transition-all duration-150 ${className}`}
+    className={`flex items-center justify-between cursor-pointer transition-all duration-150 ${className}`}
   >
-    <div className="flex items-center space-x-3 flex-grow min-w-0">
-      {children}
-    </div>
-    <button className="text-gray-600 hover:text-blue-600 flex-shrink-0 transition-colors">
+    {children}
+    <button className="text-gray-600 hover:text-blue-600 flex-shrink-0 transition-colors ml-2">
       {isExpanded ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
     </button>
   </div>

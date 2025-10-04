@@ -21,16 +21,14 @@ export const OrderGroup: React.FC<OrderGroupProps> = ({
       <CollapsibleHeader
         isExpanded={isExpanded}
         toggle={() => setIsExpanded(!isExpanded)}
-        className="p-4 hover:bg-gray-50 rounded-t-lg"
+        className="p-3 hover:bg-gray-50 rounded-t-lg"
       >
-        <div className="flex items-center gap-3 flex-grow min-w-0">
-          <span className="flex items-center justify-center w-8 h-8 bg-blue-600 text-white rounded-full text-sm font-bold flex-shrink-0">
-            {order.orderNumber || '#'}
-          </span>
-          <h2 className="text-base font-semibold text-gray-900">
-            {order.orderName || 'Заказ без названия'}
-          </h2>
-        </div>
+        <span className="flex items-center justify-center w-7 h-7 bg-blue-600 text-white rounded-full text-sm font-bold flex-shrink-0">
+          {order.orderNumber || '#'}
+        </span>
+        <h2 className="text-sm font-semibold text-gray-900 flex-grow min-w-0 ml-3">
+          {order.orderName || 'Заказ без названия'}
+        </h2>
         <FinancialTotals
           income={order.totalIncome}
           expense={order.totalExpense}

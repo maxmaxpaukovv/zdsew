@@ -21,9 +21,9 @@ export const PositionGroup: React.FC<PositionGroupProps> = ({
       <CollapsibleHeader
         isExpanded={isExpanded}
         toggle={() => setIsExpanded(!isExpanded)}
-        className="py-2 hover:bg-blue-50 rounded"
+        className="py-2 px-2 hover:bg-blue-50 rounded"
       >
-        <h3 className="text-sm font-medium text-gray-800">
+        <h3 className="text-sm text-gray-800 flex-grow min-w-0">
           {group.baseItemName}
         </h3>
         <FinancialTotals

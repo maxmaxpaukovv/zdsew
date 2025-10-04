@@ -31,12 +31,12 @@ export const TransactionTypeGroup: React.FC<TransactionTypeGroupProps> = ({
       <CollapsibleHeader
         isExpanded={isExpanded}
         toggle={() => setIsExpanded(!isExpanded)}
-        className="py-1.5 hover:bg-gray-50 rounded"
+        className="py-1.5 px-2 hover:bg-gray-50 rounded"
       >
-        <h4 className={`text-sm font-medium ${textColor}`}>
+        <h4 className={`text-sm ${textColor} flex-grow min-w-0`}>
           {isIncome ? 'Доходы' : 'Расходы'}
         </h4>
-        <span className={`text-sm font-semibold ml-auto ${textColor}`}>
+        <span className={`text-sm font-semibold ${textColor}`}>
           {formatCurrency(group.totalAmount)}
         </span>
       </CollapsibleHeader>
