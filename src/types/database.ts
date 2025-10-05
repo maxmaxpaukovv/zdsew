@@ -479,6 +479,7 @@ export interface Database {
           accepted_motor_id: string
           item_description: string
           work_group: string | null
+          transaction_type: string | null
           quantity: number
           price: number
           upd_document_id: string | null
@@ -490,6 +491,7 @@ export interface Database {
           accepted_motor_id: string
           item_description: string
           work_group?: string | null
+          transaction_type?: string | null
           quantity?: number
           price?: number
           upd_document_id?: string | null
@@ -501,6 +503,7 @@ export interface Database {
           accepted_motor_id?: string
           item_description?: string
           work_group?: string | null
+          transaction_type?: string | null
           quantity?: number
           price?: number
           upd_document_id?: string | null
